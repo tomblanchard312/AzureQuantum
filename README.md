@@ -6,7 +6,7 @@ The **Azure Quantum Project** is a collection of Q# programs designed to explore
 🔹 **Current Programs:**
 -  [`QuantumHelloWorld`](QuantumHelloWorld/) → **Basic Hello World in Q#**
 -  [`QuantumEntanglement`](QuantumEntanglement/) → **Bell State Entanglement Experiment**
--  [`GHZ Entanglement`](GHZ Entanglement/) → **GHZ Entanglement in Q#**
+-  [`GHZ Entanglement`](GHZEntanglement/) → **Bell State Entanglement Experiment**
 
 ---
 
