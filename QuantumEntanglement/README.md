@@ -1,56 +1,60 @@
-# Quantum Entanglement in Q#
+# Quantum Entanglement
 
-## What is Quantum Entanglement?
-Quantum entanglement is a phenomenon in which **two or more qubits become linked** so that their states are **always correlated**, no matter how far apart they are.
+This project demonstrates the fundamental concept of quantum entanglement using Q#. It creates and measures a Bell pair, which is the simplest form of quantum entanglement between two qubits.
 
-If you measure one entangled qubit, the result **immediately determines** the state of the other, even if they are **light-years apart**.
+## Overview
 
-This property is fundamental for **Quantum Computing, Quantum Cryptography, and Quantum Teleportation**.
+Quantum entanglement is a phenomenon where two or more particles become correlated in such a way that the quantum state of each particle cannot be described independently of the others. This implementation:
 
----
+1. Creates a Bell pair (an entangled state of two qubits)
+2. Measures both qubits
+3. Demonstrates the correlated measurement outcomes
 
-## How This Q# Program Works
-This Q# program **creates and measures an entangled Bell state** between two qubits.
+## Prerequisites
 
-### **Steps:**
-1. Start with **two qubits** in the |0⟩ state.
-2. Apply a **Hadamard (H) gate** to the first qubit to create superposition.
-3. Use a **CNOT gate** to entangle the second qubit with the first.
-4. Measure both qubits.
-5. Display the results.
+- [.NET Core SDK](https://dotnet.microsoft.com/download) (version 6.0 or higher)
+- [Microsoft Quantum Development Kit](https://docs.microsoft.com/azure/quantum/)
 
-🔹 **Expected Output:**  
-Both qubits will always have the **same measurement** (`00` or `11`), proving entanglement!
+## Usage
 
----
+Run the application:
 
-## How to Run This Program
-### ** Install QDK (Quantum Development Kit)**
-Make sure you have the **.NET SDK and QDK** installed:
-
+```bash
+dotnet run
 ```
-   dotnet new install Microsoft.Quantum.ProjectTemplates
 
-## *1. Clone This Repository
+## How It Works
 
-```
-    git clone https://github.com/tomblanchard312/azurequantum.git
-    cd azurequantum/QuantumEntanglement
+### Creating Entanglement
+1. Initialize two qubits to |00⟩
+2. Apply a Hadamard gate to the first qubit, creating a superposition: (|0⟩ + |1⟩)|0⟩
+3. Apply a CNOT gate with the first qubit as control and the second as target
+4. This creates the Bell state: |00⟩ + |11⟩ (unnormalized)
 
-## *2. Run the Q# Program
+### Measurement
+- Both qubits are measured in the standard basis
+- Due to entanglement, the measurements will always yield the same result
+- If the first qubit is measured as 0, the second will also be 0
+- If the first qubit is measured as 1, the second will also be 1
 
-```
-    dotnet run
+## Code Structure
 
-## *3. Expected Results
+- `Operations.qs`: Contains the Q# code that creates and measures the entangled state
+  - `CreateEntanglement`: The main entry point operation
 
-When you run the program, you will see:
+## Significance of Entanglement
 
-Qubit 1: One
-Qubit 2: One
+Entanglement is a fundamental quantum resource that enables:
+- Quantum teleportation
+- Superdense coding
+- Quantum key distribution
+- Quantum computing speedups
+- Violations of Bell inequalities, demonstrating the non-local nature of quantum mechanics
 
-or 
+## Related Quantum Projects
 
-Qubit 1: One
-Qubit 2: One
-
+Check out other quantum computing projects in this repository:
+- [BB84WithQEC](../BB84WithQEC/) - Quantum key distribution with error correction
+- [GHZEntanglement](../GHZEntanglement/) - Creates and measures a 3-qubit GHZ entangled state
+- [QuantumErrorCorrection](../QuantumErrorCorrection/) - Implements a three-qubit bit-flip code
+- [QuantumHelloWorld](../QuantumHelloWorld/) - Simple "Hello World" quantum program
