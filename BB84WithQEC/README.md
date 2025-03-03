@@ -20,7 +20,7 @@ BB84 is a quantum key distribution protocol developed by Charles Bennett and Gil
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/tomblanchard312/AzureQuantum.git
    cd BB84WithQEC
    ```
 
