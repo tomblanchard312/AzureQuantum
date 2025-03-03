@@ -6,7 +6,7 @@ The **Azure Quantum Project** is a collection of Q# programs designed to explore
 🔹 **Current Programs:**
 -  [`QuantumHelloWorld`](QuantumHelloWorld/) → **Basic Quantum Circuit (Superposition)**
 -  [`QuantumEntanglement`](QuantumEntanglement/) → **Bell State Entanglement Experiment**
--  **More Quantum Cryptography & Simulations Coming Soon!**
+-  [`GHZ Entanglement`](GHZ Entanglement/) → **GHZ Entanglement in Q#**
 
 ---
 
@@ -33,5 +33,5 @@ To execute programs on real quantum hardware, authenticate with Azure Quantum:
 
 ```
     dotnet run -- --target ionq.qpu
-    
+
 This runs the quantum algorithm on real quantum hardware!
