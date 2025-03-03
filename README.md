@@ -4,7 +4,7 @@
 The **Azure Quantum Project** is a collection of Q# programs designed to explore **Quantum Computing** concepts. Each program focuses on different quantum algorithms and cryptographic techniques, leveraging the power of **Q# and Azure Quantum**.
 
 🔹 **Current Programs:**
--  [`QuantumHelloWorld`](QuantumHelloWorld/) → **Basic Quantum Circuit (Superposition)**
+-  [`QuantumHelloWorld`](QuantumHelloWorld/) → **Basic Hello World in Q#**
 -  [`QuantumEntanglement`](QuantumEntanglement/) → **Bell State Entanglement Experiment**
 -  **More Quantum Cryptography & Simulations Coming Soon!**
 
